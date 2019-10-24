@@ -45,7 +45,8 @@ void CPU::execute(u16 opcode, RAM ram, IO io) {
         case 0x0000:
             switch(nnn) {
                 case 0x0E0:
-                    std::cout << "\n00E0 NOT YET IMPLEMENTED\n\n";
+                    io.clear_display();
+                    io.set_draw_flag(true);
                     pc += 2;
                     break;
                 case 0x0EE:
@@ -128,12 +129,18 @@ void CPU::execute(u16 opcode, RAM ram, IO io) {
         case 0xE000:
             switch(nn) {
                 case 0x9E:
-                    std::cout << "\nEX9E NOT YET IMPLEMENTED\n\n";
-                    pc += 4;
+                    if (io.is_key_pressed(x)) {
+                        pc += 4;
+                    } else {
+                        pc += 2;
+                    }
                     break;
                 case 0xA1:
-                    std::cout << "\nEXA1 NOT YET IMPLEMENTED\n\n";
-                    pc += 2;
+                    if (!io.is_key_pressed(x)) {
+                        pc += 4;
+                    } else {
+                        pc += 2;
+                    }
                     break;
                 default:
                     printf("Unrecognized E opcode: %.4X\n", opcode);

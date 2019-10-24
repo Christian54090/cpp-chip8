@@ -6,11 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/csanders/CLionProjects/cchip8/src/IO.cpp
-iostream
--
+/home/csanders/CLionProjects/cchip8/src/CPU.h
+RAM.h
+/home/csanders/CLionProjects/cchip8/src/RAM.h
 IO.h
 /home/csanders/CLionProjects/cchip8/src/IO.h
 
+/home/csanders/CLionProjects/cchip8/src/IO.h
+
+/home/csanders/CLionProjects/cchip8/src/RAM.h
+
+/home/csanders/CLionProjects/cchip8/src/main.cpp
+iostream
+-
+chrono
+-
+thread
+-
+stdint.h
+/home/csanders/CLionProjects/cchip8/src/stdint.h
+SDL2/SDL.h
+/home/csanders/CLionProjects/cchip8/src/SDL2/SDL.h
+CPU.h
+/home/csanders/CLionProjects/cchip8/src/CPU.h
+RAM.h
+/home/csanders/CLionProjects/cchip8/src/RAM.h
+IO.h
 /home/csanders/CLionProjects/cchip8/src/IO.h
 

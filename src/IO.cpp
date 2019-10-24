@@ -19,6 +19,10 @@ bool IO::is_key_pressed(u8 index) {
     return key[index] != 0;
 }
 
+void IO::set_key(u8 index, u8 val) {
+    key[index] = val;
+}
+
 bool IO::pixel_is_on(u16 index) {
     return screen[index] == 1;
 }
@@ -30,4 +34,18 @@ void IO::xor_pixel(u16 index) {
 
 void IO::set_draw_flag(bool val) {
     draw_flag = val;
+}
+
+bool IO::check_draw_flag() {
+    return draw_flag;
+}
+
+u8 IO::get_pixel(u16 index) {
+    return screen[index];
+}
+
+void IO::clear_display() {
+    for (unsigned char & i : screen) {
+        i = 0;
+    }
 }

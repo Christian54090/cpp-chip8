@@ -19,6 +19,10 @@ public:
     bool pixel_is_on(u16 index);
     void xor_pixel(u16 index);
     void set_draw_flag(bool val);
+    void set_key(u8 index, u8 val);
+    bool check_draw_flag();
+    u8 get_pixel(u16 index);
+    void clear_display();
 };
 
 
