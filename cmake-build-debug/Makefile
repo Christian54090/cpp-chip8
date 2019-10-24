@@ -150,6 +150,33 @@ src/CPU.cpp.s:
 	$(MAKE) -f CMakeFiles/cchip8.dir/build.make CMakeFiles/cchip8.dir/src/CPU.cpp.s
 .PHONY : src/CPU.cpp.s
 
+src/IO.o: src/IO.cpp.o
+
+.PHONY : src/IO.o
+
+# target to build an object file
+src/IO.cpp.o:
+	$(MAKE) -f CMakeFiles/cchip8.dir/build.make CMakeFiles/cchip8.dir/src/IO.cpp.o
+.PHONY : src/IO.cpp.o
+
+src/IO.i: src/IO.cpp.i
+
+.PHONY : src/IO.i
+
+# target to preprocess a source file
+src/IO.cpp.i:
+	$(MAKE) -f CMakeFiles/cchip8.dir/build.make CMakeFiles/cchip8.dir/src/IO.cpp.i
+.PHONY : src/IO.cpp.i
+
+src/IO.s: src/IO.cpp.s
+
+.PHONY : src/IO.s
+
+# target to generate assembly for a file
+src/IO.cpp.s:
+	$(MAKE) -f CMakeFiles/cchip8.dir/build.make CMakeFiles/cchip8.dir/src/IO.cpp.s
+.PHONY : src/IO.cpp.s
+
 src/RAM.o: src/RAM.cpp.o
 
 .PHONY : src/RAM.o
@@ -216,6 +243,9 @@ help:
 	@echo "... src/CPU.o"
 	@echo "... src/CPU.i"
 	@echo "... src/CPU.s"
+	@echo "... src/IO.o"
+	@echo "... src/IO.i"
+	@echo "... src/IO.s"
 	@echo "... src/RAM.o"
 	@echo "... src/RAM.i"
 	@echo "... src/RAM.s"

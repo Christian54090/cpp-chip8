@@ -6,6 +6,7 @@
 #include <iostream>
 #include "CPU.h"
 #include "RAM.h"
+#include "IO.h"
 
 void CPU::init() {
     pc = 0x200;
@@ -20,20 +21,20 @@ void CPU::init() {
     }
 }
 
-void CPU::step(RAM ram) {
+void CPU::step(RAM ram, IO io) {
     u16 opcode = ram.get_word(pc);
 
     // DEBUGGING
-    std::cout << std::hex << opcode << " " << pc << " " << sp << " " << I << "\n";
-    for (unsigned char i : v) {
-        std::cout << std::hex << (int)i << ", ";
-    }
-    std::cout << "\n\n";
+//    std::cout << std::hex << opcode << " " << pc << " " << sp << " " << I << "\n";
+//    for (unsigned char i : v) {
+//        std::cout << std::hex << (int)i << ", ";
+//    }
+//    std::cout << "\n\n";
 
-    execute(opcode);
+    execute(opcode, ram, io);
 }
 
-void CPU::execute(u16 opcode) {
+void CPU::execute(u16 opcode, RAM ram, IO io) {
     u16 nnn = opcode & 0x0FFF;
     u8 nn = opcode & 0x00FF;
     u8 n = opcode & 0x000F;
@@ -107,14 +108,28 @@ void CPU::execute(u16 opcode) {
             pc += 2;
             break;
         case 0xD000:
-            std::cout << "\nDXYN NOT YET IMPLEMENTED\n\n";
+            v[0xF] = 0;
+
+            u8 pixel;
+            for (int row = 0; row < n; row++) {
+                pixel = ram.mem[I + row];
+                for (int col = 0; col < 8; col++) {
+                    if ((pixel & (0x80 >> col)) != 0) {
+                        u16 index = x + col + ((row + col) * 64);
+                        if (io.pixel_is_on(index))
+                            v[0xF] = 1;
+                        io.xor_pixel(index);
+                    }
+                }
+            }
+            io.set_draw_flag(true);
             pc += 2;
             break;
         case 0xE000:
             switch(nn) {
                 case 0x9E:
                     std::cout << "\nEX9E NOT YET IMPLEMENTED\n\n";
-                    pc += 2;
+                    pc += 4;
                     break;
                 case 0xA1:
                     std::cout << "\nEXA1 NOT YET IMPLEMENTED\n\n";

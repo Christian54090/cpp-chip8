@@ -3,12 +3,17 @@
 
 CMakeFiles/cchip8.dir/src/CPU.cpp.o: ../src/CPU.cpp
 CMakeFiles/cchip8.dir/src/CPU.cpp.o: ../src/CPU.h
+CMakeFiles/cchip8.dir/src/CPU.cpp.o: ../src/IO.h
 CMakeFiles/cchip8.dir/src/CPU.cpp.o: ../src/RAM.h
+
+CMakeFiles/cchip8.dir/src/IO.cpp.o: ../src/IO.cpp
+CMakeFiles/cchip8.dir/src/IO.cpp.o: ../src/IO.h
 
 CMakeFiles/cchip8.dir/src/RAM.cpp.o: ../src/RAM.cpp
 CMakeFiles/cchip8.dir/src/RAM.cpp.o: ../src/RAM.h
 
 CMakeFiles/cchip8.dir/src/main.cpp.o: ../src/CPU.h
+CMakeFiles/cchip8.dir/src/main.cpp.o: ../src/IO.h
 CMakeFiles/cchip8.dir/src/main.cpp.o: ../src/RAM.h
 CMakeFiles/cchip8.dir/src/main.cpp.o: ../src/main.cpp
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cchip8.dir/src/CPU.cpp.o"
+  "CMakeFiles/cchip8.dir/src/IO.cpp.o"
   "CMakeFiles/cchip8.dir/src/RAM.cpp.o"
   "CMakeFiles/cchip8.dir/src/main.cpp.o"
   "cchip8"

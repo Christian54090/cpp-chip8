@@ -4,11 +4,16 @@
 CMakeFiles/cchip8.dir/src/CPU.cpp.o
  /home/csanders/CLionProjects/cchip8/src/CPU.cpp
  /home/csanders/CLionProjects/cchip8/src/CPU.h
+ /home/csanders/CLionProjects/cchip8/src/IO.h
  /home/csanders/CLionProjects/cchip8/src/RAM.h
+CMakeFiles/cchip8.dir/src/IO.cpp.o
+ /home/csanders/CLionProjects/cchip8/src/IO.cpp
+ /home/csanders/CLionProjects/cchip8/src/IO.h
 CMakeFiles/cchip8.dir/src/RAM.cpp.o
  /home/csanders/CLionProjects/cchip8/src/RAM.cpp
  /home/csanders/CLionProjects/cchip8/src/RAM.h
 CMakeFiles/cchip8.dir/src/main.cpp.o
  /home/csanders/CLionProjects/cchip8/src/CPU.h
+ /home/csanders/CLionProjects/cchip8/src/IO.h
  /home/csanders/CLionProjects/cchip8/src/RAM.h
  /home/csanders/CLionProjects/cchip8/src/main.cpp

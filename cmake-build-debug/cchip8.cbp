@@ -90,6 +90,12 @@
 		<Unit filename="/home/csanders/CLionProjects/cchip8/src/CPU.h">
 			<Option target="cchip8"/>
 		</Unit>
+		<Unit filename="/home/csanders/CLionProjects/cchip8/src/IO.cpp">
+			<Option target="cchip8"/>
+		</Unit>
+		<Unit filename="/home/csanders/CLionProjects/cchip8/src/IO.h">
+			<Option target="cchip8"/>
+		</Unit>
 		<Unit filename="/home/csanders/CLionProjects/cchip8/src/RAM.cpp">
 			<Option target="cchip8"/>
 		</Unit>

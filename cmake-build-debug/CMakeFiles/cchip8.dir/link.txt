@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/cchip8.dir/src/main.cpp.o CMakeFiles/cchip8.dir/src/CPU.cpp.o CMakeFiles/cchip8.dir/src/RAM.cpp.o  -o cchip8 
+/usr/bin/c++  -g   CMakeFiles/cchip8.dir/src/main.cpp.o CMakeFiles/cchip8.dir/src/CPU.cpp.o CMakeFiles/cchip8.dir/src/RAM.cpp.o CMakeFiles/cchip8.dir/src/IO.cpp.o  -o cchip8 

@@ -1,8 +1,9 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
+#include "stdint.h"
+#include "SDL2/SDL.h"
 #include "CPU.h"
 #include "RAM.h"
+#include "IO.h"
 
 typedef unsigned char u8;
 typedef unsigned short int u16;
@@ -12,6 +13,8 @@ int main() {
     cpu.init();
     RAM ram{};
     ram.init();
+    IO io{};
+    io.init();
 
     FILE *rom_file;
     rom_file = fopen("../roms/INVADERS", "rb");
@@ -19,6 +22,6 @@ int main() {
     fclose(rom_file);
 
     while(true) {
-        cpu.step(ram);
+        cpu.step(ram, io);
     }
 }
