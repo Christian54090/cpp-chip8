@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <vector>
 #include "CPU.h"
 #include "RAM.h"
 
@@ -12,11 +14,11 @@ int main() {
     ram.init();
 
     FILE *rom_file;
-    rom_file = fopen("c:/INVADERS", "rb");
-    fread(&ram.mem[0x200], 0xFFF, 1, rom_file);
+    rom_file = fopen("../roms/INVADERS", "rb");
+    fread(&ram.mem[0x200], 4095, 1, rom_file);
     fclose(rom_file);
 
-    cpu.step(ram);
-
-    return 0;
+    while(true) {
+        cpu.step(ram);
+    }
 }

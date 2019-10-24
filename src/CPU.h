@@ -13,6 +13,7 @@ typedef unsigned short int u16;
 class CPU {
 private:
     u16 pc;
+    u16 I;
     u16 sp;
     u16 stack[16];
     u8 delay_timer;
@@ -22,6 +23,7 @@ private:
 public:
     void init();
     void step(RAM ram);
+    void execute(u16 opcode);
 };
 
 
