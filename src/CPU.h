@@ -5,6 +5,8 @@
 #ifndef CCHIP8_CPU_H
 #define CCHIP8_CPU_H
 
+#include "RAM.h"
+
 typedef unsigned char u8;
 typedef unsigned short int u16;
 
@@ -19,6 +21,7 @@ private:
 
 public:
     void init();
+    void step(RAM ram);
 };
 
 

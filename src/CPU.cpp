@@ -2,7 +2,9 @@
 // Created by csanders on 10/23/19.
 //
 
+#include <iostream>
 #include "CPU.h"
+#include "RAM.h"
 
 void CPU::init() {
     pc = 0x200;
@@ -14,4 +16,10 @@ void CPU::init() {
         stack[i] = 0;
         v[i] = 0;
     }
+}
+
+void CPU::step(RAM ram) {
+    std::cout << "I'm here";
+    u16 opcode = ram.get_word(pc);
+    std::cout << opcode;
 }

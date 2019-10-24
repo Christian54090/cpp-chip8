@@ -10,9 +10,12 @@ typedef unsigned short int u16;
 
 class RAM {
 private:
-    u8 mem[4096];
 public:
+    u8 mem[4096];
     void init();
+    void wb(u16 address, u8 value);
+    u8 rb(u16 address);
+    u16 get_word(u16 address);
 };
 
 

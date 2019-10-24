@@ -4,9 +4,6 @@
 
 #include "RAM.h"
 
-//typedef unsigned char u8;
-//typedef unsigned short int u16;
-
 void RAM::init() {
     u8 sprites[80] = {
             0xF0, 0x90, 0x90, 0x90, 0xF0,
@@ -34,4 +31,19 @@ void RAM::init() {
     for (int i = 81; i < 4096; ++i) {
         mem[i] = 0;
     }
+}
+
+u8 RAM::rb(u16 address) {
+    return mem[address];
+}
+
+void RAM::wb(u16 address, u8 value) {
+    mem[address] = value;
+}
+
+u16 RAM::get_word(u16 address) {
+    u16 res = 0;
+    res = rb(address);
+    res = res << 8 | rb(address + 1);
+    return res;
 }

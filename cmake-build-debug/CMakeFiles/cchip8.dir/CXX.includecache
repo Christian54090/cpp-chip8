@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/csanders/CLionProjects/cchip8/src/CPU.h
+RAM.h
+/home/csanders/CLionProjects/cchip8/src/RAM.h
+
+/home/csanders/CLionProjects/cchip8/src/RAM.h
+
+/home/csanders/CLionProjects/cchip8/src/main.cpp
+iostream
+-
+CPU.h
+/home/csanders/CLionProjects/cchip8/src/CPU.h
+RAM.h
+/home/csanders/CLionProjects/cchip8/src/RAM.h
+
